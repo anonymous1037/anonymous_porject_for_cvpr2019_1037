@@ -20,7 +20,7 @@ def main(args):
         train_list = 'data/imagenet/train.txt'
         test_list = 'data/imagenet/test.txt'
         #true_hash = 'data/imagenet/imagenet_100_class.pkl'
-        true_hash = 'data/imagenet/' + '5_' + str(args.hash_bit) + '_imagenet_100_class.pkl'
+        true_hash = 'data/imagenet/hash_centers/' + str(args.hash_bit) + '_imagenet_100_class.pkl'
         #true_hash = 'data/imagenet/32_imagenet_100_class.pkl'
         data_imbalance = 100
         two_loss_epoch = -1
@@ -30,7 +30,7 @@ def main(args):
         train_list = 'data/coco/train.txt'
         test_list = 'data/coco/test.txt'
         #true_hash = 'data/coco/coco_ha80_class.pkl'
-        true_hash = 'data/coco/' + '5_' + str(args.hash_bit) + '_coco_80_class.pkl'
+        true_hash = 'data/coco/hash_centers/' + str(args.hash_bit) + '_coco_80_class.pkl'
         data_imbalance = 1
         two_loss_epoch = -1
         total_epoch = 90
@@ -38,7 +38,7 @@ def main(args):
     elif args.data_name == 'nus_wide':
         train_list = 'data/nus_wide/train.txt'
         #true_hash = 'data/nus_wide/nus_wide_ha21_class.pkl'
-        true_hash = 'data/nus_wide/' + '5_' + str(args.hash_bit) + '_nus_wide_21_class.pkl'
+        true_hash = 'data/nus_wide/hash_centers' + str(args.hash_bit) + '_nus_wide_21_class.pkl'
         data_imbalance = 5
         two_loss_epoch = -1
         total_epoch = 90
