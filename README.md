@@ -21,27 +21,29 @@ Python 3.6
 
 ## Train on imagenet, 64bit hash bits
 
-'''
+```
 python train.py --data_name imagenet --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05
-'''
+```
 
 Trained model will be saved in 'data/imagenet/models/'
 
 
-## Train on coco, 64bit hash bits
 
-'''
+Train on coco, 64bit hash bits
+
+```
 python train.py --data_name coco --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05 --multi_lr 0.05
-'''
+```
 
 Trained model will be saved in 'data/coco/models/'
 
 
-## Train on nus_wide, 64bit hash bits
 
-'''
+Train on nus_wide, 64bit hash bits
+
+```
 python train.py --data_name nus_wide --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05  --multi_lr 0.05
-'''
+```
 
 Trained model will be saved in 'data/nus_wide/models/'
 
@@ -51,30 +53,33 @@ Trained model will be saved in 'data/nus_wide/models/'
 If you want to evaluate our pretraied models for three ImageNet, COCO, NUS_WIDE (64bit, 32bit, 16bit) are in the anonymous link, [here](https://drive.google.com/drive/folders/1HFLDfPvSrVITCFwolcQ3arym4PTODMHQ?usp=sharing)
 
 
-## Test for imagenet:
+
+Test for imagenet:
 
 download pre-trained model 'imagenet_64bit_0.8734_resnet50.pkl' for imagenet, put it in 'data/imagenet/', then run:
 
-'''
+```
 python test.py --data_name imagenet --gpus 0,1 --model_name 'imagenet_64bit_0.8734_resnet50.pkl' 
-'''
+```
 
-## Test for coco:
+
+Test for coco:
 
 download pre-trained model 'coco_64bit_0.8612_resnet50.pkl' for coco, put it in 'data/coco/', then run:
 
-'''
+```
 python test.py --data_name coco --gpus 0,1 --model_name 'coco_64bit_0.8612_resnet50.pkl' 
-'''
+```
 
 
-## Test for nus_wide:
+
+Test for nus_wide:
 
 download pre-trained model 'nus_wide_64bit_0.8391_resnet50.pkl' for nus_wide, put it in 'data/nus_wide/', then run:
 
-'''
+```
 python test.py --data_name nus_wide --gpus 0,1 --model_name 'nus_wide_64bit_0.8391_resnet50.pkl' 
-'''
+```
 
 # Hash Center
 Here, we put hash centers for imagenet we used in 'data/imagenet/hash_centers', we will release the algorithm for hash center generation in the future.
