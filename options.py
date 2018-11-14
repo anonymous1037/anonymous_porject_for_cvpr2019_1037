@@ -28,3 +28,4 @@ parser.add_argument('--batch_size_hash', type=int, default=40, help='the batch s
 # Testing
 parser.add_argument('--R', type=int, default=1000, help='MAP@R')
 parser.add_argument('--T', type=float, default=0, help='Threshold for binary')
+parser.add_argument('--model_name', type=str, default='imagenet_64bit_0.873_resnet50.pkl', help='Put any model you want to test here')

@@ -17,8 +17,8 @@ def mean_average_precision(database_hash, test_hash, database_labels, test_label
     test_hash[test_hash>=T] = 1
 
     query_num = test_hash.shape[0]  # total number for testing
-    sim = np.dot(database_hash, test_hash.T) 
-    ids = np.argsort(-sim, axis=0)  
+    sim = np.dot(database_hash, test_hash.T)  # sim越大，内积越大，hamming distance 越小，越接近
+    ids = np.argsort(-sim, axis=0)  # -sim, argsort后是沿x轴越接近的序列号靠前。sort一般都升序排，-sim相当于对sim降序排
     #data_dir = 'data/' + args.data_name
     #ids_10 = ids[:10, :]
 
@@ -100,7 +100,8 @@ if __name__ == '__main__':
 
     database_list = 'data/' + args.data_name + '/database.txt'
     test_list = 'data/' + args.data_name + '/test.txt'
-    model_dir = 'data/' + args.data_name + '/' + str(args.hash_bit) + '_' + args.model_type + '.pkl'
+    model_name = args.model_name   # or just put your model name here
+    model_dir = 'data/' + args.data_name + '/' + model_name
     model = torch.load(model_dir)
 
     """
