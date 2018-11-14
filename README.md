@@ -1,1 +1,2 @@
-# cvpr2019_1037
+# Anonymous project for submittion paper #1037 of CVPR'19
+We first put all codes for image hashing.
