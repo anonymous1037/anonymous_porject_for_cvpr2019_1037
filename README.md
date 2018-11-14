@@ -19,33 +19,39 @@ Python 3.6
 
 # Train
 
-## Train on imagenet, 64bit hash bits
+Train on imagenet, hash bit: 64bit 
+
+Trained model will be saved in 'data/imagenet/models/'
 
 ```
 python train.py --data_name imagenet --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05
 ```
 
-Trained model will be saved in 'data/imagenet/models/'
 
 
 
-Train on coco, 64bit hash bits
+
+Train on coco, hash bits: 64bit 
+
+Trained model will be saved in 'data/coco/models/'
 
 ```
 python train.py --data_name coco --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05 --multi_lr 0.05
 ```
 
-Trained model will be saved in 'data/coco/models/'
 
 
 
-Train on nus_wide, 64bit hash bits
+
+Train on nus_wide, hash bit: 64bit 
+
+Trained model will be saved in 'data/nus_wide/models/'
 
 ```
 python train.py --data_name nus_wide --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05  --multi_lr 0.05
 ```
 
-Trained model will be saved in 'data/nus_wide/models/'
+
 
 
 # Test
@@ -80,6 +86,20 @@ download pre-trained model 'nus_wide_64bit_0.8391_resnet50.pkl' for nus_wide, pu
 ```
 python test.py --data_name nus_wide --gpus 0,1 --model_name 'nus_wide_64bit_0.8391_resnet50.pkl' 
 ```
+
+
+The MAP of retrieval on the three datasets are shown in the following:
+
+
+| Dataset  | MAP(64bit) | MAP(32bit) | MAP(16bit)|
+| :---     |    :---:   |    :---:   |   ---:    |
+| ImageNet |    0.873   |    0.865   |   0.851   |
+| MS COCO  |    0.861   |    0.838   |   0.796   |
+| NUS WIDE |    0.839   |    0.825   |   0.810   |
+
+
+
+
 
 # Hash Center
 Here, we put hash centers for imagenet we used in 'data/imagenet/hash_centers', we will release the algorithm for hash center generation in the future.
