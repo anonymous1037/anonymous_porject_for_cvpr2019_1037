@@ -74,7 +74,7 @@ Train on imagenet, hash bit: 64bit
 Trained model will be saved in 'data/imagenet/models/'
 
 ```
-python train.py --data_name imagenet --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05
+python train.py --data_name imagenet --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05  --R 1000
 ```
 
 
@@ -86,7 +86,7 @@ Train on coco, hash bits: 64bit
 Trained model will be saved in 'data/coco/models/'
 
 ```
-python train.py --data_name coco --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05 --multi_lr 0.05
+python train.py --data_name coco --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05 --multi_lr 0.05  --R 5000
 ```
 
 
@@ -98,7 +98,7 @@ Train on nus_wide, hash bit: 64bit
 Trained model will be saved in 'data/nus_wide/models/'
 
 ```
-python train.py --data_name nus_wide --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05  --multi_lr 0.05
+python train.py --data_name nus_wide --hash_bit 64 --gpus 0,1 --model_type resnet50 --lambda1 0  --lambda2 0.05  --multi_lr 0.05 --R 5000
 ```
 
 
