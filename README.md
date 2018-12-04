@@ -1,6 +1,6 @@
 # Anonymous project for CVPR 2019 submission #1037
 
-We first release all codes and configurations for image hashing. Codes and configutations for video hasing will be release in the future.
+We first release all codes and configurations for image hashing. Codes and configutations for video hashing will be released in the future.
 
 ## Prerequisties
 
@@ -14,7 +14,7 @@ Python 3.6
 ## Datasets
 1. Download database for the retrieval list of imagenet in the anonymous link [here](https://drive.google.com/open?id=1xDfg2liQzjzXxp51DEgSVMEI1trKJ_RA), and put database.txt in 'data/imagenet/'
 
-2. Download MS COCO, ImageNet2012, NUS_WIDE in their own official website: [COCO](http://cocodataset.org/#download), [ImageNet](http://image-net.org/download-images), [NUS_WIDE](https://lms.comp.nus.edu.sg/research/NUS-WIDE.htm). Unzip all data and put in 'data/', corresponding director for every dataset.
+2. Download MS COCO, ImageNet2012, NUS_WIDE in their official website: [COCO](http://cocodataset.org/#download), [ImageNet](http://image-net.org/download-images), [NUS_WIDE](https://lms.comp.nus.edu.sg/research/NUS-WIDE.htm). Unzip all data and put in 'data/dataset_name/'.
 
 
 
@@ -108,4 +108,4 @@ python train.py --data_name nus_wide --hash_bit 64 --gpus 0,1 --model_type resne
 
 
 ## Hash Center
-Here, we put hash centers for imagenet we used in 'data/imagenet/hash_centers', we will release the algorithm for hash center generation in the future.
+Here, we put hash centers for imagenet we used in 'data/imagenet/hash_centers', we will release the algorithms for hash center generation in the future.
