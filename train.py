@@ -38,7 +38,7 @@ def main(args):
     elif args.data_name == 'nus_wide':
         train_list = 'data/nus_wide/train.txt'
         #true_hash = 'data/nus_wide/nus_wide_ha21_class.pkl'
-        true_hash = 'data/nus_wide/hash_centers' + str(args.hash_bit) + '_nus_wide_21_class.pkl'
+        true_hash = 'data/nus_wide/hash_centers/' + str(args.hash_bit) + '_nus_wide_21_class.pkl'
         data_imbalance = 5
         two_loss_epoch = -1
         total_epoch = 90
